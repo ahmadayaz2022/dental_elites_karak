@@ -1,0 +1,18 @@
+# React client
+/client/node_modules/
+/client/build/
+/client/.env.local
+/client/.env.*.local
+
+# Root level (if any packages installed here)
+node_modules/
+
+# Common
+.DS_Store
+.env
+.env.local
+*.log
+.vscode/
+.idea/
+coverage/
+dist/

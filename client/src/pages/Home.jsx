@@ -9,6 +9,9 @@ import ProcessSection from "../components/ProcessSection/ProcessSection";
 import WhyChooseUs from "../components/WhyChooseUs/WhyChooseUs";
 import TestimonialsSection from "../components/TestimonialsSection/TestimonialsSection";
 
+import FaqSection from "../components/FaqSection/FaqSection";
+import CTA from "../components/CTA/CTA";
+
 function Home() {
   return (
     <>
@@ -21,6 +24,8 @@ function Home() {
       <ProcessSection />
       <WhyChooseUs />
       <TestimonialsSection />
+      <FaqSection />
+      <CTA />
     </>
   );
 }

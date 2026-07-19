@@ -11,6 +11,7 @@ import TestimonialsSection from "../components/TestimonialsSection/TestimonialsS
 
 import FaqSection from "../components/FaqSection/FaqSection";
 import CTA from "../components/CTA/CTA";
+import Footer from "../components/Footer/Footer";
 
 function Home() {
   return (
@@ -26,6 +27,7 @@ function Home() {
       <TestimonialsSection />
       <FaqSection />
       <CTA />
+      <Footer/>
     </>
   );
 }

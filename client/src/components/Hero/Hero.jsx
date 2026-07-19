@@ -8,6 +8,8 @@ import {
   FaTooth,
 } from "react-icons/fa";
 
+import PrimaryButton from "../CTA/CTA"
+
 function Hero() {
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-sky-50 via-white to-cyan-50">
@@ -44,10 +46,10 @@ function Hero() {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 mt-10">
-              <button className="bg-sky-700 hover:bg-sky-800 text-white px-7 py-4 rounded-full flex items-center gap-3 transition duration-300 shadow-lg">
+              <PrimaryButton className="bg-sky-700 hover:bg-sky-800 text-white px-7 py-4 rounded-full flex items-center gap-3 transition duration-300 shadow-lg">
                 <FaCalendarAlt />
                 Book Appointment
-              </button>
+              </PrimaryButton>
 
               <button className="border-2 border-sky-700 text-sky-700 hover:bg-sky-700 hover:text-white px-7 py-4 rounded-full flex items-center gap-3 transition duration-300">
                 <FaPhoneAlt />

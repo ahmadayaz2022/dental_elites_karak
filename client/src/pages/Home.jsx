@@ -16,18 +16,29 @@ import Footer from "../components/Footer/Footer";
 function Home() {
   return (
     <>
-      <Hero />
-      <Stats />
-      <AboutSection />
-      <ServicesSection />
-      <Statistics />
-      <DoctorsSection />
-      <ProcessSection />
-      <WhyChooseUs />
-      <TestimonialsSection />
-      <FaqSection />
-      <CTA />
-      <Footer/>
+<>
+<Hero/>
+
+<Stats/>
+
+<AboutSection/>
+
+<ServicesSection/>
+
+<Statistics/>
+
+<DoctorsSection/>
+
+<ProcessSection/>
+
+<WhyChooseUs/>
+
+<TestimonialsSection/>
+
+<FaqSection/>
+
+<CTA/>
+</>
     </>
   );
 }

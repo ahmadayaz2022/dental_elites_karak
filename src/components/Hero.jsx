@@ -50,7 +50,7 @@ export default function Hero() {
         <div className="hero__visual">
           <div className="hero__frame">
             <img
-              src="src/assets/hero/heroimage.avif"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTQyhBvoss031LlyTSInWaVsRmmXxM7gKuf2dyjZnBZs6PiBcGq9jhQHA&s=10"
               alt="Dentist providing modern dental care to a patient in a clean clinical environment"
               loading="eager"
             />

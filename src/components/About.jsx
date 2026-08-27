@@ -2,6 +2,8 @@ import SmileArc from './SmileArc.jsx'
 import useReveal from '../hooks/useReveal.js'
 import './About.css'
 
+
+
 const HIGHLIGHTS = [
   'Modern and comfortable clinical environment',
   'Professional, courteous dental care',
@@ -18,7 +20,7 @@ export default function About() {
       <div className="container about__inner">
         <div className="about__visual reveal">
           <img
-            src="src/assets/hero/about.avif"
+            src="https://canttdentalcare.com/wp-content/uploads/2024/10/dentists-in-lahore.webp"
             alt="Modern, clean interior of the Dental Elites Aesthetic Center clinic"
           />
           <div className="about__visual-card">

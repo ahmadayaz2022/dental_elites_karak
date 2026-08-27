@@ -17,7 +17,7 @@ export const team = [
 
       {
     name: 'Mr. Latif Khattak',
-    role: 'Aesthetic & Hair Transplant Specialist',
+    role: 'Aesthetic & Hair Transplant Technician ',
     Education: 'BS Aesthetic & Hair Transplant',
     description:
       'Provides Aesthetic and Hair Transplant treatment and consultation at Dental Elites Aesthetic Center, focused on patient comfort and care.',
@@ -33,7 +33,7 @@ export const team = [
   },
   {
     name: 'Mr. Anwar Khattak',
-    role: 'Dental Technologist',
+    role: 'General Dentist',
     Education: 'Diploma in Dental Technology',
     description:
       'Supports clinical and technical procedures at the clinic, helping treatments run smoothly for every patient.',
@@ -43,7 +43,7 @@ export const team = [
 
   {
     name: 'Mr. Ihsan Khattak',
-    role: 'Dental Doctor',
+    role: ' Maxillofacial Surgeon',
     Education: 'BDS',
     description:
       'Provides dental treatment and consultation at Dental Elites Aesthetic Center, focused on patient comfort and care.',

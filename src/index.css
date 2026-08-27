@@ -1,0 +1,344 @@
+/* =========================================================
+   DENTAL ELITES AESTHETIC CENTER — Design Tokens
+   Palette:
+     --navy        #0E2A43  deep navy (headings, footer, nav)
+     --navy-soft   #17395A  secondary navy
+     --blue        #4E7C97  soft blue (accents, links)
+     --blue-pale   #EAF2F6  soft blue background tint
+     --mist        #F6F7F9  light gray background
+     --white       #FFFFFF
+     --gold        #B4915B  subtle gold accent (the "smile arc")
+     --gold-soft   #E9DCC3  pale gold tint
+   Type:
+     Display: 'Fraunces' (optical-size serif, used with restraint)
+     Body/UI: 'Inter'
+   Signature element: the "Smile Arc" — a thin, hand-drawn-feeling
+   gold curve (echoing the arc of a smile) used as a recurring
+   divider / underline / hero motif throughout the site.
+   ========================================================= */
+
+:root {
+  --navy: #0e2a43;
+  --navy-soft: #17395a;
+  --navy-deep: #081c2e;
+  --blue: #4e7c97;
+  --blue-pale: #eaf2f6;
+  --mist: #f6f7f9;
+  --white: #ffffff;
+  --gold: #b4915b;
+  --gold-soft: #e9dcc3;
+  --gold-deep: #8f6f3f;
+  --ink: #1c2b36;
+  --ink-soft: #5b6b76;
+  --line: #e2e8ec;
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 10px rgba(14, 42, 67, 0.06);
+  --shadow-md: 0 12px 32px rgba(14, 42, 67, 0.10);
+  --shadow-lg: 0 24px 60px rgba(14, 42, 67, 0.16);
+
+  --container: 1200px;
+  --nav-height: 84px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--white);
+  overflow-x: hidden;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--navy);
+  line-height: 1.15;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+section {
+  padding: 112px 0;
+}
+
+@media (max-width: 900px) {
+  section { padding: 76px 0; }
+  .container { padding: 0 20px; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 56px 0; }
+  .container { padding: 0 16px; }
+
+  .btn {
+    padding: 14px 22px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .hero__actions .btn,
+  .appointment__whatsapp,
+  .navbar__mobile-cta .btn {
+    width: 100%;
+  }
+
+  .section-heading {
+    font-size: clamp(26px, 7vw, 34px);
+  }
+
+  .section-sub {
+    font-size: 15.5px;
+  }
+}
+
+/* -------- Shared section header -------- */
+.section-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-body);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+  margin-bottom: 18px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  width: 28px;
+  height: 1.5px;
+  background: var(--gold);
+  display: inline-block;
+}
+
+.section-heading {
+  font-size: clamp(30px, 4vw, 46px);
+  max-width: 640px;
+}
+
+.section-heading.center {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-sub {
+  color: var(--ink-soft);
+  font-size: 17px;
+  max-width: 620px;
+  margin-top: 18px;
+}
+
+.section-sub.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.section-head-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 56px;
+}
+
+@media (max-width: 760px) {
+  .section-head-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* -------- The Smile Arc (signature motif) -------- */
+.smile-arc {
+  display: block;
+  width: 88px;
+  height: 20px;
+}
+
+.smile-arc.center {
+  margin: 0 auto;
+}
+
+/* -------- Buttons -------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.01em;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease, border-color .25s ease;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--navy);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background: var(--navy-soft);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-gold {
+  background: var(--gold);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-gold:hover {
+  background: var(--gold-deep);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--navy);
+  border: 1.5px solid var(--line);
+}
+
+.btn-outline:hover {
+  border-color: var(--navy);
+  transform: translateY(-2px);
+}
+
+.btn-outline.on-dark {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.35);
+}
+
+.btn-outline.on-dark:hover {
+  border-color: var(--white);
+  background: rgba(255,255,255,0.08);
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-whatsapp:hover {
+  background: #1fb958;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:focus-visible,
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2.5px solid var(--gold);
+  outline-offset: 3px;
+}
+
+/* -------- Reveal-on-scroll animation -------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.08s; }
+.reveal-delay-2 { transition-delay: 0.16s; }
+.reveal-delay-3 { transition-delay: 0.24s; }
+.reveal-delay-4 { transition-delay: 0.32s; }
+
+/* -------- Utility -------- */
+.pill-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  background: var(--blue-pale);
+  color: var(--navy-soft);
+  font-size: 13.5px;
+  font-weight: 600;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

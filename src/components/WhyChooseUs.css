@@ -1,0 +1,87 @@
+.why {
+  background: var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.why::before {
+  content: '';
+  position: absolute;
+  top: -180px;
+  left: -180px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(180, 145, 91, 0.14), transparent 70%);
+}
+
+.why .section-heading-wrap {
+  text-align: center;
+  margin-bottom: 56px;
+  position: relative;
+}
+
+.why .section-eyebrow {
+  color: var(--gold-soft);
+  justify-content: center;
+  display: flex;
+}
+
+.why .section-heading {
+  color: var(--white);
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  position: relative;
+}
+
+.why__card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .why__card {
+    padding: 24px 20px;
+  }
+}
+
+.why__card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(180, 145, 91, 0.5);
+}
+
+.why__icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(180, 145, 91, 0.18);
+  color: var(--gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.why__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.why__card h4 {
+  color: var(--white);
+  font-size: 17.5px;
+  margin-bottom: 10px;
+}
+
+.why__card p {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14.5px;
+}

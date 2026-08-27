@@ -1,0 +1,143 @@
+.appointment {
+  background: var(--mist);
+}
+
+.appointment__inner {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 64px;
+}
+
+.appointment__intro {
+  position: sticky;
+  top: 120px;
+  align-self: start;
+}
+
+.appointment__intro .smile-arc {
+  margin: 18px 0;
+}
+
+.appointment__intro .section-sub {
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+.appointment__whatsapp {
+  width: fit-content;
+}
+
+.appointment__form {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+}
+
+.appointment__success {
+  background: #e8f6ee;
+  color: #1c7a44;
+  border: 1px solid #bfe6cf;
+  border-radius: var(--radius-sm);
+  padding: 16px 18px;
+  font-size: 14.5px;
+  font-weight: 500;
+  margin-bottom: 26px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.form-field--full {
+  grid-column: 1 / -1;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--navy-soft);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  width: 100%;
+  padding: 13px 16px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--line);
+  font-family: inherit;
+  font-size: 14.5px;
+  color: var(--ink);
+  background: var(--white);
+  transition: border-color 0.2s ease;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--gold);
+  outline: none;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.form-error {
+  font-size: 12.5px;
+  color: #c0392b;
+  font-weight: 500;
+}
+
+.appointment__submit {
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media (max-width: 900px) {
+  .appointment__inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .appointment__intro {
+    position: static;
+  }
+
+  .appointment__form {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .appointment__form {
+    padding: 22px 18px;
+  }
+
+  .appointment__whatsapp {
+    width: 100%;
+  }
+
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    padding: 12px 14px;
+    font-size: 16px; /* prevents iOS zoom-on-focus */
+  }
+}

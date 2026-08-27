@@ -1,18 +1,48 @@
-# React client
-/client/node_modules/
-/client/build/
-/client/.env.local
-/client/.env.*.local
-
-# Root level (if any packages installed here)
+```gitignore
+# Dependencies
 node_modules/
 
-# Common
-.DS_Store
+# Build output
+dist/
+build/
+
+# Environment variables
 .env
 .env.local
-*.log
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Cache
+.cache/
+.parcel-cache/
+.vite/
+
+# Testing
+coverage/
+
+# Editor / IDE
 .vscode/
 .idea/
-coverage/
-dist/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+
+# Local configuration
+*.local
+
+# Optional: local development files
+*.log
+```

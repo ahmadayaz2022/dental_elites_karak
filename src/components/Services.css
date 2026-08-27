@@ -1,0 +1,336 @@
+/* ==================================================
+   SERVICES SECTIONS
+================================================== */
+
+.services {
+  position: relative;
+  padding: 100px 0;
+}
+
+.services--dental {
+  background: var(--mist);
+}
+
+.services--aesthetic {
+  background: var(--white);
+}
+
+
+/* ==================================================
+   SECTION HEADER
+================================================== */
+
+.services .section-head-row {
+  margin-bottom: 50px;
+}
+
+
+/* ==================================================
+   SERVICE CATEGORY TABS
+================================================== */
+
+.services__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.services__tabs--wrap {
+  row-gap: 12px;
+}
+
+.services__tab {
+  appearance: none;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-pill);
+  background: var(--white);
+  color: var(--ink-soft);
+  padding: 12px 22px;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.services__tab:hover {
+  border-color: var(--gold);
+  color: var(--navy);
+  transform: translateY(-1px);
+}
+
+.services__tab:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
+.services__tab.is-active {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+  box-shadow: var(--shadow-sm);
+}
+
+
+/* ==================================================
+   CATEGORY DESCRIPTION
+================================================== */
+
+.services__tab-desc {
+  max-width: 680px;
+  margin: 0 0 36px;
+
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   SERVICES GRID
+================================================== */
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(260px, 1fr)
+  );
+  gap: 24px;
+}
+
+
+/* ==================================================
+   SERVICE CARD
+================================================== */
+
+.service-card {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 285px;
+
+  padding: 32px 28px;
+
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.services--aesthetic .service-card {
+  background: var(--blue-pale);
+  border-color: transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold-soft);
+}
+
+
+/* ==================================================
+   SERVICE ICON
+================================================== */
+
+.service-card__icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 14px;
+
+  background: var(--blue-pale);
+  color: var(--navy);
+}
+
+.services--aesthetic .service-card__icon {
+  background: var(--white);
+}
+
+.service-card__icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+
+/* ==================================================
+   SERVICE TITLE
+================================================== */
+
+.service-card h4 {
+  margin: 0 0 8px;
+
+  color: var(--ink);
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+
+/* ==================================================
+   SERVICE DESCRIPTION
+================================================== */
+
+.service-card p {
+  margin: 0 0 20px;
+
+  color: var(--ink-soft);
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+
+/* ==================================================
+   SERVICE LINK
+================================================== */
+
+.service-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  width: fit-content;
+
+  margin-top: auto;
+
+  color: var(--gold-deep);
+
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    gap 0.2s ease;
+}
+
+.service-card__link:hover {
+  color: var(--navy);
+  gap: 10px;
+}
+
+.service-card__link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+.service-card__link svg {
+  width: 15px;
+  height: 15px;
+
+  transition: transform 0.2s ease;
+}
+
+.service-card__link:hover svg {
+  transform: translateX(3px);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 900px) {
+  .services {
+    padding: 80px 0;
+  }
+
+  .services .section-head-row {
+    margin-bottom: 40px;
+  }
+
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .service-card {
+    padding: 28px 24px;
+  }
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 640px) {
+  .services {
+    padding: 70px 0;
+  }
+
+  .services__tabs {
+    gap: 8px;
+  }
+
+  .services__tab {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .services__tab-desc {
+    font-size: 14px;
+    margin-bottom: 28px;
+  }
+
+  .services__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .service-card {
+    padding: 26px 22px;
+  }
+}
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 420px) {
+  .services {
+    padding: 60px 0;
+  }
+
+  .services__tabs {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .services__tab {
+    width: 100%;
+    text-align: center;
+  }
+
+  .service-card {
+    padding: 24px 20px;
+  }
+
+  .service-card__icon {
+    width: 48px;
+    height: 48px;
+  }
+}

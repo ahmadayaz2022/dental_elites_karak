@@ -16,7 +16,7 @@ export default function Hero() {
         <div className="hero__copy">
           <span className="pill-tag hero__eyebrow">
             <SmileArc className="hero__eyebrow-arc" />
-            Dental &amp; Aesthetic Center, Amberi kalla Karak
+            Dental &amp; Aesthetic Center, in Amberi kalla Karak kpk.
           </span>
 
           <h1 className="hero__heading">

@@ -37,8 +37,8 @@ export default function Navbar() {
         <a href="#home" className="navbar__logo" onClick={handleNavClick}>
           <span className="navbar__logo-mark">DE</span>
           <span className="navbar__logo-text">
-            <strong>Dental Elites &</strong>
-            <small>Aesthetic Center</small>
+            <strong>Dental Elites</strong>
+            {/* <small>Aesthetic Center</small> */}
           </span>
         </a>
 

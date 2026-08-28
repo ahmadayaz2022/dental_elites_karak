@@ -41,7 +41,7 @@ export const team = [
     image: furqanImage,
   },
   {
-    name: "Mr. Latif Khattak",
+    name: "Dr. Latif Khattak",
     role: "Aesthetic & Hair Transplant Technician ",
     Education: "BS Aesthetic & Hair Transplant",
     description:

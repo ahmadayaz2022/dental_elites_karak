@@ -16,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       <Doctors />
+      <Appointment />
       <Video />
       <About />
       <Services />
@@ -24,7 +25,6 @@ export default function Home() {
       <Gallery />
       <Testimonials />
       <FAQ />
-      <Appointment />
       <Contact />
     </>
   )
